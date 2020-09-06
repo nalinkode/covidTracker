@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  AfterViewInit } from '@angular/core';
 import { CovidServiceService } from '../service/covid-service.service';
 import {GlobalDataSummary} from '../models/global-data-summary';
 import { GoogleChartInterface } from 'ng2-google-charts';
