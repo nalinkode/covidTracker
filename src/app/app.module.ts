@@ -9,14 +9,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
-    ProductListComponent
   ],
   bootstrap: [ AppComponent ]
 })
