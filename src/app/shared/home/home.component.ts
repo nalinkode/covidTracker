@@ -69,14 +69,14 @@ export class HomeComponent implements OnInit {
       chartType: 'PieChart',
       dataTable: datatable,
      //firstRowIsData: true,
-     //options: {'Country': 'Cases'},
+      options: {'Country': 'Cases', 'height':400},
     };
 
     this.columnChart = {
       chartType: 'ColumnChart',
       dataTable: datatable,
      //firstRowIsData: true,
-     //options: {'Country': 'Cases'},
+     options: {'Country': 'Cases', 'height':400}, 
     };
   }
 
