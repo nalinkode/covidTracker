@@ -69,14 +69,14 @@ export class HomeComponent implements OnInit {
       chartType: 'PieChart',
       dataTable: datatable,
      //firstRowIsData: true,
-     options: {'Country': 'Cases'},
+     //options: {'Country': 'Cases'},
     };
 
     this.columnChart = {
       chartType: 'ColumnChart',
       dataTable: datatable,
      //firstRowIsData: true,
-     options: {'Country': 'Cases'},
+     //options: {'Country': 'Cases'},
     };
   }
 
@@ -93,14 +93,15 @@ export class HomeComponent implements OnInit {
         this.totalRecovered += dat.recovered
          }   
         })
-         this.initChart('');
+         this.initChart('c');
       }
     })   
   }
 
 
   onChangeCheck(input : HTMLInputElement){
-    this.initChart(input.v);
+    debugger
+    this.initChart(input.value);
   }
 
 }
