@@ -16,13 +16,15 @@ import { AppComponent } from './app.component';
 import { CovidServiceService } from './shared/service/covid-service.service';
 import { DashboardCardComponent } from './shared/dashboard-card/dashboard-card.component';
 
+import { Ng2GoogleChartsModule, GoogleChartsSettings } from 'ng2-google-charts';
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     routing,
-    HttpClientModule
-
+    HttpClientModule,
+    Ng2GoogleChartsModule
   ],
   declarations: [
     AppComponent, 
