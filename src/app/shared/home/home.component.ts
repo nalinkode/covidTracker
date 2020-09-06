@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getGlobaleData();
-    this.initChart();
+   
   }
 
   initChart(){
@@ -61,6 +61,7 @@ export class HomeComponent implements OnInit {
         })
       }
     })
+     this.initChart();
   }
 
 }
