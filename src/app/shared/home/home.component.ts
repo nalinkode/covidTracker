@@ -31,14 +31,38 @@ export class HomeComponent implements OnInit {
     this.getGlobaleData();
   }
 
-  initChart(){
+  initChart( caseType : string){
     let datatable = [];
     datatable.push(["Country", "Cases"]);
     debugger
     this.globalData.forEach(res=>{
-      if(res.confirmed > 3000) {
-      datatable.push([ res.country, res.confirmed])
+      let value : number;
+      if(caseType == 'c'){
+        if(res.confirmed > 2000){
+           value = res.confirmed;
+        }
       }
+  
+      if(caseType == 'a'){
+        if(res.active > 2000){
+           value = res.active;
+        }
+      }
+
+      if(caseType == 'd'){
+        if(res.deaths > 1000){
+           value = res.deaths;
+        }
+      }
+
+      if(caseType == 'r'){
+         if(res.recovered > 1000){
+           value = res.recovered;
+        }
+      }
+      
+      datatable.push([ res.country, valu])
+      
     })
 
     this.pieChart = {
@@ -72,6 +96,11 @@ export class HomeComponent implements OnInit {
          this.initChart();
       }
     })   
+  }
+
+
+  onChangeCheck(input : HTMLInputElement){
+
   }
 
 }
