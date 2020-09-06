@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
         }
       }
       
-      datatable.push([ res.country, valu])
+      datatable.push([ res.country, value])
       
     })
 
@@ -93,14 +93,14 @@ export class HomeComponent implements OnInit {
         this.totalRecovered += dat.recovered
          }   
         })
-         this.initChart();
+         this.initChart('');
       }
     })   
   }
 
 
   onChangeCheck(input : HTMLInputElement){
-
+    this.initChart(input.v);
   }
 
 }
