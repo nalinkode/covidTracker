@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit {
       next : (result)=>{
         console.log(result)
      this.globalData = result;
-     this.initChart();
       result.forEach(dat=>{
         if(!Number.isNaN(dat.confirmed)){
         this.totalActive += dat.active;
@@ -68,6 +67,7 @@ export class HomeComponent implements OnInit {
         this.totalRecovered += dat.recovered
          }   
         })
+         this.initChart();
       }
     })   
   }
