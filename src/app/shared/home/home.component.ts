@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit {
   totalActive = 0;
   totalDeaths = 0;
   totalRecovered = 0;
-  globalData = GlobalDataSummary[];
+  
+  globalData :GlobalDataSummary[];
+
   constructor(private covidService :  CovidServiceService) { }
 
   ngOnInit() {
@@ -20,7 +22,7 @@ export class HomeComponent implements OnInit {
       next : (result)=>{
 
         console.log(result)
-     
+     this.globalData = result;
       result.forEach(dat=>{
         if(!Number.isNaN(dat.confirmed)){
         this.totalActive += dat.active;
