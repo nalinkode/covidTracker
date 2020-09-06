@@ -10,7 +10,6 @@ import { CountriesComponent } from './shared/countries/countries.component';
 import { HomeComponent } from './shared/home/home.component';
 import { routing } from './app.routing';
 import {Error404Component} from './shared/error/error404/error404.component';
-import { DataServiceService } from './shared/service/data-service.service';
 
 
 import { AppComponent } from './app.component';
