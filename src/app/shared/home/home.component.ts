@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   
   globalData:GlobalDataSummary[];
 
-  constructor(private covidService :  CovidServiceService) { }
+  constructor(private covidService : CovidServiceService) { }
 
   ngOnInit() {
     this.getGlobaleData();
@@ -69,8 +69,7 @@ export class HomeComponent implements OnInit {
          }   
         })
       }
-    })
-     
+    })   
   }
 
 }
