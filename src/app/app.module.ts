@@ -14,6 +14,7 @@ import {Error404Component} from './shared/error/error404/error404.component';
 
 import { AppComponent } from './app.component';
 import { CovidServiceService } from './shared/service/covid-service.service';
+import { DashboardCardComponent } from './shared/dashboard-card/dashboard-card.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { CovidServiceService } from './shared/service/covid-service.service';
     NavBarComponent,  
     CountriesComponent,
     HomeComponent,
-    Error404Component
+    Error404Component,
+    DashboardCardComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CovidServiceService]
