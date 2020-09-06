@@ -31,7 +31,6 @@ import { AppComponent } from './app.component';
     Error500Component, 
     CountriesComponent,
     HomeComponent,
-    Error400Component
   ],
   bootstrap: [ AppComponent ]
 })
