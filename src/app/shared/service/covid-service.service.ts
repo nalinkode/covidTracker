@@ -20,15 +20,16 @@ export class CovidServiceService {
        let rows  = result.split('\n');
        rows.forEach(row=>{
          let cols = row.split(/,(?=\S)/)
-         console.log(cols)
+         
          data.push({
-           coountry : cols[3],
-           confirmed : cols[7],
-           deaths : cols[8],
-           recovered : cols[9],
-           active : cols[10]
+           country : cols[3],
+           confirmed : +cols[7],
+           deaths : +cols[8],
+           recovered : +cols[9],
+           active : +cols[10]
          })
        })
+       console.log(data);
        return [];
 
      })
