@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
       chartType: 'PieChart',
       dataTable: datatable,
      //firstRowIsData: true,
-     options: {height : 500},
+     options: {'Country': 'Cases'},
     };
   }
 
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
       next : (result)=>{
         console.log(result)
      this.globalData = result;
-      this.initChart();
+     this.initChart();
       result.forEach(dat=>{
         if(!Number.isNaN(dat.confirmed)){
         this.totalActive += dat.active;
@@ -56,7 +56,6 @@ export class HomeComponent implements OnInit {
         this.totalRecovered += dat.recovered
          }   
         })
-       
       }
     })
      
