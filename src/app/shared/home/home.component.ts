@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   };
 
   columnChart: GoogleChartInterface = {
-  chartType: 'columnChart'
+  chartType: 'ColumnChart'
   };
 
   
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     };
 
     this.columnChart = {
-      chartType: 'columnChart',
+      chartType: 'ColumnChart',
       dataTable: datatable,
      //firstRowIsData: true,
      options: {'Country': 'Cases'},
