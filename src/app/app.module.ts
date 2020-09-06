@@ -14,6 +14,7 @@ import { DataServiceService } from './shared/service/data-service.service';
 
 
 import { AppComponent } from './app.component';
+import { CovidServiceService } from './shared/service/covid-service.service';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { AppComponent } from './app.component';
     HomeComponent,
     Error404Component
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [CovidServiceService]
 })
 export class AppModule { }
 
