@@ -13,9 +13,11 @@ export class CovidServiceService {
  constructor(private http: HttpClient) { }
 
  getGlobalData(){
-   this.http.get(this.globalData, ).pipe(
+   return this.http.get(this.globalData, {responseType: 'text'} ).pipe(
      map(result => {
-       
+
+       return result;
+
      })
    )
  }

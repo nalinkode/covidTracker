@@ -13,6 +13,11 @@ export class HomeComponent implements OnInit {
   constructor(private covidService :  CovidServiceService) { }
 
   ngOnInit() {
+    this.covidService.getGlobalData().subscribe({
+      next : (result)=>{
+        console.log(result)
+      }
+    })
   }
 
 }
