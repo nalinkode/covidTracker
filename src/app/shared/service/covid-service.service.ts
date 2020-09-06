@@ -18,6 +18,8 @@ export class CovidServiceService {
      map(result => {
        let data : GlobalDataSummary[] = [];
        let rows  = result.split('\n');
+       rows.splice(0,1);
+       
        rows.forEach(row=>{
          let cols = row.split(/,(?=\S)/)
          
