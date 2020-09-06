@@ -24,12 +24,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getGlobaleData();
-   
   }
 
   initChart(){
     let datatable = [];
     datatable.push(["Country", "Cases"]);
+    debugger
     this.globalData.forEach(res=>{
       datatable.push([ res.country, res.confirmed])
     })
@@ -55,9 +55,10 @@ export class HomeComponent implements OnInit {
         this.totalRecovered += dat.recovered
          }   
         })
+        this.initChart();
       }
     })
-     this.initChart();
+     
   }
 
 }
