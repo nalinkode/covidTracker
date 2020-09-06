@@ -15,8 +15,12 @@ export class CovidServiceService {
  getGlobalData(){
    return this.http.get(this.globalData, {responseType: 'text'} ).pipe(
      map(result => {
-
-       return result;
+       let rows  = result.split('\n');
+       rows.forEach(row=>{
+         let cols = row.split(/,(?=\S)/)
+         console.log(cols)
+       })
+       return [];
 
      })
    )

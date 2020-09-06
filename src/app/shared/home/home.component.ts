@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CovidServiceService } from '../service/covid-service.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
