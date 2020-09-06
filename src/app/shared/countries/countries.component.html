@@ -4,7 +4,7 @@
 
   <div class="mx-auto">
     <div class="form-group col-lg-5 mx-auto">
-     
+      <label for="c">Select country </label>
       <select class="form-control" id="c" #value (change)="onChange(value.value)">
         <option disabled="">Select Country</option>
         <option value="{{con}}" *ngFor="let con of countries">{{con}}</option>
