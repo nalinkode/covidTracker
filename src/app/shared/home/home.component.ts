@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CovidServiceService } from '../service/covid-service.service';
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private covidService :  CovidServiceService) { }
 
   ngOnInit() {
   }
