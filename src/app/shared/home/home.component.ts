@@ -50,13 +50,13 @@ export class HomeComponent implements OnInit {
       }
 
       if(caseType == 'd'){
-        if(res.deaths > 1000){
+        if(res.deaths > 10000){
            value = res.deaths;
         }
       }
 
       if(caseType == 'r'){
-         if(res.recovered > 1000){
+         if(res.recovered > 2000){
            value = res.recovered;
         }
       }
