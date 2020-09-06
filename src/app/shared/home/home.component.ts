@@ -31,10 +31,7 @@ export class HomeComponent implements OnInit {
     let datatable = [];
     datatable.push(["Country", "Cases"]);
     this.globalData.forEach(res=>{
-      datatable.push([
-         res.country,
-         res.confirmed
-      ])
+      datatable.push([ res.country, res.confirmed])
     })
 
     this.pieChart = {
@@ -48,7 +45,6 @@ export class HomeComponent implements OnInit {
   getGlobaleData(){
      this.covidService.getGlobalData().subscribe({
       next : (result)=>{
-
         console.log(result)
      this.globalData = result;
       result.forEach(dat=>{
