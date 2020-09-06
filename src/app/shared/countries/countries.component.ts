@@ -10,6 +10,11 @@ import {GlobalDataSummary} from '../models/global-data-summary';
 export class CountriesComponent implements OnInit {
  data : GlobalDataSummary[];
  countries : string[] = [];
+ totalConfirmed = 0;
+  totalActive = 0;
+  totalDeaths = 0;
+  totalRecovered = 0;
+
 constructor(private covidService : CovidServiceService ) { }
 
   ngOnInit() {
@@ -19,6 +24,19 @@ constructor(private covidService : CovidServiceService ) { }
           this.countries.push(c.country);
         })
       })
+  }
+
+  onChange(country : string){
+     this.data.forEach(res=>{
+       if(res.country == country){
+         this.totalActive = res.active;
+         this.totalConfirmed = res.confirmed;
+         this.totalDeaths = res.deaths;
+         this.totalRecovered = res.recovered;
+       }
+     })
+
+    
   }
 
 }
