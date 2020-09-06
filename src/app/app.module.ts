@@ -15,6 +15,7 @@ import { DataServiceService } from './shared/service/data-service.service';
 
 
 import { AppComponent } from './app.component';
+import { Error400Component } from './shared/error/error400/error400.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { AppComponent } from './app.component';
     Error404Component,
     Error500Component, 
     CountriesComponent,
-    HomeComponent
+    HomeComponent,
+    Error400Component
   ],
   bootstrap: [ AppComponent ]
 })
