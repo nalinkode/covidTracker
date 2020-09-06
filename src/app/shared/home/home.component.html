@@ -4,6 +4,13 @@
 <app-dashboard-card [totalConfirmed]='totalConfirmed' [totalActive]='totalActive' [totalDeaths]='totalDeaths' [totalRecovered]='totalRecovered'></app-dashboard-card>
 
 </div>
+<div class ="row">
+  <div class = "col">
+   <google-chart [data]="pieChart"></google-chart>
+  </div>
+  <div class="col">
+    <google-chart [data]="columnChart"></google-chart>
+  </div>
+</div>
 
-<google-chart [data]="pieChart"></google-chart>
-<google-chart [data]="columnChart"></google-chart>
+
