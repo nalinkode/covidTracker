@@ -23,9 +23,8 @@ export class HomeComponent implements OnInit {
   constructor(private covidService :  CovidServiceService) { }
 
   ngOnInit() {
-    this.initChart();
     this.getGlobaleData();
-   
+    this.initChart();
   }
 
   initChart(){
