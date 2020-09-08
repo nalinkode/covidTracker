@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   chart = {
     PieChart : "PieChart",
     ColumnChart : "ColumnChart",
+    height : 300,
     options : {
      animations: {
        duration:1000,
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   initChart( caseType : string){
     this.datatable = [];
-  /  this.datatable.push(["Country", "Cases"]);
+  //  this.datatable.push(["Country", "Cases"]);
     debugger
     this.globalData.forEach(res=>{
       let value : number;
