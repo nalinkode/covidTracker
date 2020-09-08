@@ -15,7 +15,7 @@ import {Error404Component} from './shared/error/error404/error404.component';
 import { AppComponent } from './app.component';
 import { CovidServiceService } from './shared/service/covid-service.service';
 import { DashboardCardComponent } from './shared/dashboard-card/dashboard-card.component';
-
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   imports: [
@@ -23,6 +23,7 @@ import { DashboardCardComponent } from './shared/dashboard-card/dashboard-card.c
     ReactiveFormsModule,
     routing,
     HttpClientModule,
+    GoogleChartsModule
     
   ],
   declarations: [
