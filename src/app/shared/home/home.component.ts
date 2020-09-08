@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
    }
   }
    
-
   
   globalData:GlobalDataSummary[];
 
