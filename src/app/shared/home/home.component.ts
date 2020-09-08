@@ -13,13 +13,18 @@ export class HomeComponent implements OnInit {
   totalActive = 0;
   totalDeaths = 0;
   totalRecovered = 0;
-   options : {
+  chart = {
+    PieChart : "PieChart",
+    CloumnChart :"ColumnChart",
      height: 500,
+    options : {
      animations: {
        duration:1000,
        easing: 'out'
      }
    }
+  }
+   
 
   
   globalData:GlobalDataSummary[];
